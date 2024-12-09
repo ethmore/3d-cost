@@ -1,0 +1,64 @@
+.product {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 82px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8px;
+    background-color: var(--inputPrimary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.product-controls {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    justify-content: space-around;
+    gap: 6px;
+    margin: 6px;
+    padding: 6px;
+}
+
+.product-button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transition: all 100ms;
+    cursor: pointer;
+}
+
+.product-button img {
+    width: 22px;
+}
+
+.delete_confirmation {
+    border: 6px solid var(--danger);
+
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    gap: 5px;
+    background-color: var(--inputPrimary);
+    border-radius: 14px;
+    transition: transform 200ms ease-in-out;
+}
+
+.delete_confirmation img {
+    width: 35px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.delete-check {
+    background-color: var(--danger);
+    border-radius: 0 10px 10px 0 !important;
+}

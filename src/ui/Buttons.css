@@ -1,0 +1,41 @@
+.add-button {
+    --addButtonHeight: 3px;
+    --addButtonWidth: 18px;
+    --addButtonColor: #000000;
+
+    width: var(--addButtonWidth);
+    height: var(--addButtonWidth);
+    cursor: pointer;
+    position: relative;
+    transition: all 200ms;
+    padding: 5px;
+    border-radius: 9999px;
+}
+.add-button:hover {
+    scale: 1.1;
+    background-color: #bde7cb;
+}
+.add-button div {
+    position: absolute;
+    background-color: var(--addButtonColor);
+    height: var(--addButtonHeight);
+    width: var(--addButtonWidth);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.add-button div:last-child {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.save-button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--success);
+    color: black;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}

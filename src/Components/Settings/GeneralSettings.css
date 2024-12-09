@@ -1,0 +1,83 @@
+.general-settings {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.settings-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--settingsYPadding);
+    height: 80px;
+    background-color: white;
+    z-index: 8;
+}
+
+.settings-printers {
+    padding: 0 var(--settingsYPadding);
+    display: grid;
+    gap: 6px;
+}
+
+.settings-filaments {
+    padding: 0 var(--settingsYPadding);
+    padding-top: 30px;
+    display: grid;
+    gap: 6px;
+}
+
+.filaments {
+    overflow: hidden;
+
+    display: grid;
+    gap: 6px;
+}
+
+.settings-printers-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #a3a3a3;
+}
+
+.settings-filaments-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #a3a3a3;
+}
+
+.other-settings {
+    padding: 30px var(--settingsYPadding);
+    padding-bottom: 60px;
+    display: grid;
+    gap: 6px;
+}
+.other-settings-head {
+    border-bottom: 2px solid #a3a3a3;
+    overflow: hidden;
+}
+.other-settings-head h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 500px) {
+    .settings-header {
+        padding: 0 5%;
+    }
+
+    .settings-printers {
+        padding: 0 5%;
+    }
+    .settings-filaments {
+        padding: 0 5%;
+        padding-top: 30px;
+    }
+    .other-settings {
+        padding: 30px 5%;
+        padding-bottom: 60px;
+    }
+}

@@ -1,0 +1,117 @@
+.settings-wrapper {
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    --settingsWidth: 350px;
+    --settingsYPadding: 50px;
+    height: 100%;
+}
+
+.settings-button {
+    position: absolute;
+    right: 60px;
+    top: 36px;
+    width: 50px;
+    height: 50px;
+    z-index: 9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 9999px;
+
+    background-color: white;
+    cursor: pointer;
+}
+.settings-button .hamburger {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger div {
+    height: 3px;
+    width: 30px;
+    background-color: black;
+    border-radius: 10px;
+    transition: all 400ms;
+}
+
+.hamburger.active {
+    background-color: white;
+}
+
+.hamburger.active div:first-child {
+    transform: translateY(8px) rotate(225deg);
+    background-color: black;
+}
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active div:last-child {
+    transform: translateY(-8px) rotate(-225deg);
+    background-color: black;
+}
+
+.settings-container {
+    position: relative;
+    background-color: white;
+    margin: 20px;
+    height: calc(100% - 40px);
+    border-radius: 20px 10px 10px 20px;
+
+    width: calc(var(--settingsWidth) + (2 * (var(--settingsYPadding))));
+    color: black;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 500ms;
+    white-space: nowrap;
+}
+
+@keyframes inAnimation {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes outAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .settings-wrapper {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .settings-container {
+        width: 100svw;
+        margin: 5%;
+    }
+
+    .settings-button {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .settings-button {
+        right: 20px;
+        top: 28px;
+    }
+}

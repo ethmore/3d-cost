@@ -1,0 +1,50 @@
+.submenu-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    box-shadow: -5px 0 20px 0 rgba(0, 0, 0, 0.233);
+    width: 300px;
+    height: 100%;
+    padding: 0 10%;
+}
+
+.submenu-container-top {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+
+    overflow: hidden;
+}
+
+.submenu-container-top h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.close {
+    width: 40px;
+    cursor: pointer;
+}
+
+.submenu-container h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.submenu-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 500px) {
+    .submenu-container {
+        width: 70%;
+    }
+}
